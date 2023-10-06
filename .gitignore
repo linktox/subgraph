@@ -1,5 +1,8 @@
 #################### Node.gitignore ####################
 
+generated
+build
+
 # Logs
 logs
 *.log
@@ -380,10 +383,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# unignore:
-!.gitignore
-!.gitsubmodules
-
 .vscode
 artifacts
 cache
+
+# unignore:
+!.gitignore
+!.gitsubmodules
