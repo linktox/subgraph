@@ -1,0 +1,28 @@
+type Nft @entity(immutable: false) {
+  id: String!
+  owner: Bytes! # address
+  tba: Bytes! # address
+  tokenId: BigInt! # uint256
+  username: String! # string
+  usernameLower: String! # string
+  flag: BigInt!
+  referrerCount: Int!
+
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Invite @entity(immutable: false) {
+  id: String!
+  fromId: BigInt! # uint256
+  toId: BigInt! # uint256
+  toUsername: String!
+  accept: Boolean
+
+  tokenId: Nft! # FK
+
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
