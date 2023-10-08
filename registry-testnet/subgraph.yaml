@@ -6,9 +6,9 @@ dataSources:
     name: XRegistry
     network: optimism-goerli
     source:
-      address: "0xc8622388Ad115a779B9c1e1dfD003613e201D8EA"
+      address: "0x56B1eaE6a8Fa9179576e1d5Cb872BD2479A2Ef65"
       abi: IXRegistry
-      startBlock: 15064460
+      startBlock: 15667627
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
