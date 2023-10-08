@@ -18,6 +18,7 @@ type Invite @entity(immutable: false) {
   fromId: BigInt! # uint256
   toId: BigInt! # uint256
   toUsername: String!
+  toUsernameLower: String!
   accept: Boolean
 
   tokenId: Nft! # FK

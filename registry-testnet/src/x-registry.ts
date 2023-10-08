@@ -91,6 +91,7 @@ export function handleInviteSend(event: InviteSendEvent): void {
   entity.fromId = event.params.fromId
   entity.toId = event.params.toId
   entity.toUsername = ""; // cannot determin username now
+  entity.toUsernameLower = "";
   entity.accept = false;
 
   // FK:
@@ -114,6 +115,7 @@ export function handleInviteAccept(event: InviteAcceptEvent): void {
   let toNft = Nft.load(toId);
   if (toNft != null) {
     entity.toUsername = toNft.username;
+    entity.toUsernameLower = toNft.username.toLowerCase();
   }
   entity.accept = true;
 
